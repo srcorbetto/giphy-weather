@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+}
+
+.component-container {
+  min-height: 95vh;
+}
+
+.footer-container {
+  width: 100%;
+  min-height: 5vh;
+  background: #0071bc;
+}
