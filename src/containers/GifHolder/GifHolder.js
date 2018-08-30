@@ -25,7 +25,7 @@ class GifHolder extends Component {
                     category="Time"
                 />
                 <div className="col-12 pt-3">
-                    <p className="disclaimer">Forcast powered by OpenWeatherMap & Giphy.</p>
+                    <p className="disclaimer">Forecast powered by OpenWeatherMap & Giphy.</p>
                 </div>
             </div>
         )
