@@ -29,25 +29,25 @@ export const gifTempEval = arg => {
 
     switch(true) {
         case tempF >= 100:
-            return 'melting'
+            return '3ktLOYGsoL8uDLbfIy'
         case tempF < 100 && tempF > 85:
-            return 'Sweating'
+            return 'l4pSWCnBmW7O8W17q'
         case tempF <= 85 && tempF >= 80:
-            return 'uncomfortable'
+            return 'fV8cSZA0EJcq55gZQo'
         case tempF < 80 && tempF > 70:
-            return 'warm'
+            return 'xUPGcsOgXlvWc3cces'
         case tempF <= 70 && tempF >= 60:
-            return 'relaxing'
+            return '4HkdcaEALCejSzmpcQ'
         case tempF < 60 && tempF > 49:
-            return 'chilly'
+            return 'l378AbkccL88mcB7W'
         case tempF <= 49 && tempF > 32:
-            return 'cold'
+            return '3oKIPvHGZvBbY3hYaY'
         case tempF <= 32 && tempF > 0:
-            return 'freezing'
+            return '26Fxr37Nm9FNtOonK'
         case tempF <= 0 && tempF > -20:
-            return 'frozen'
+            return 'l0MYDDMj9RDxNJrwc'
         default:
-            return 'question mark'
+            return '1fm964SLnrY26wSD53'
     }
 }
 
@@ -56,24 +56,78 @@ export const gifHumidityEval = humidity => {
 
     switch(true) {
         case humidity >= 100:
-            return 'gross'
+            return '8c1haKOGbnPluGn2GJ'
         case humidity < 100 && humidity > 85:
-            return 'dripping'
+            return '5UBoPaMYPHROK0Ht9c'
         case humidity <= 85 && humidity >= 80:
-            return 'moist'
+            return 'l4KhUGTcw9aH6J45y'
         case humidity < 80 && humidity > 70:
-            return 'sweat'
+            return '13OapIriToZMHu'
         case humidity <= 70 && humidity >= 60:
-            return 'perfect'
+            return '9JgrEQtKIhHiNmgsR6'
         case humidity < 60 && humidity > 49:
-            return 'comfortable'
+            return '3oKIPpkfV8vbahAuDC'
         case humidity <= 49 && humidity > 32:
-            return 'dry'
+            return 'l4FGwVysHDX9A6AWQ'
         case humidity <= 32 && humidity > 0:
-            return 'nose bleed'
+            return 'IqTQSuhgMDenK'
         case humidity <= 0 && humidity > -20:
-            return 'desert'
+            return 'dm1sY8uM36Agg'
         default:
-            return 'question mark'
+            return '1fm964SLnrY26wSD53'
+    }
+}
+
+// Convert Weather to a string that GIPHY can use
+export const gifWeatherEval = weather => {
+
+    switch(true) {
+        case weather === 'clear sky':
+            return 'pcLlolOpZm5LbWyYos'
+        case weather === 'few clouds':
+            return 'K7o9FdCoDnwEo'
+        case weather === 'scattered clouds':
+            return '8UGoPne38DRj4M7tgC'
+        case weather === 'broken clouds':
+            return '139VhIY2eHewz6'
+        case weather === 'shower rain':
+            return '7BLrHMYKpMxG0'
+        case weather === 'rain':
+            return '3WJsR3oQwp4A'
+        case weather === 'thunderstorm':
+            return 'VtOUGnwCOouCQ'
+        case weather === 'snow':
+            return 'h4rVmXTEaH160'
+        case weather === 'mist':
+            return 'C8okPSDOWUydX9zQwC'
+        default:
+            return '1fm964SLnrY26wSD53'
+    }
+}
+
+// Convert Weather to a string that GIPHY can use
+export const gifTimeEval = weather => {
+
+    switch(true) {
+        case weather === 'clear sky':
+            return 'pcLlolOpZm5LbWyYos'
+        case weather === 'few clouds':
+            return 'K7o9FdCoDnwEo'
+        case weather === 'scattered clouds':
+            return '8UGoPne38DRj4M7tgC'
+        case weather === 'broken clouds':
+            return '139VhIY2eHewz6'
+        case weather === 'shower rain':
+            return '7BLrHMYKpMxG0'
+        case weather === 'rain':
+            return '3WJsR3oQwp4A'
+        case weather === 'thunderstorm':
+            return 'VtOUGnwCOouCQ'
+        case weather === 'snow':
+            return 'h4rVmXTEaH160'
+        case weather === 'mist':
+            return 'C8okPSDOWUydX9zQwC'
+        default:
+            return '1fm964SLnrY26wSD53'
     }
 }

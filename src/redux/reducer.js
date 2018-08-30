@@ -4,12 +4,13 @@ const initialState = {
     response: 'test',
     location: null,
     tempActual: null,
-    temp: null,
+    tempID: null,
     gifTemp: null,
-    weather: null,
+    weatherActual: null,
+    weatherID: null,
     gifWeather: null,
     humidityActual: null,
-    humidity: null,
+    humidityID: null,
     gifHumidity: null,
     time: null,
     gifTime: null
@@ -26,10 +27,11 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 tempActual: action.tempActual,
-                temp: action.temp,
-                weather: action.weather,
+                tempID: action.tempID,
+                weatherActual: action.weatherActual,
+                weatherID: action.weather,
                 humidityActual: action.humidityActual,
-                humidity: action.humidity,
+                humidityID: action.humidityID,
                 time: action.time,
                 response: action.response
             }

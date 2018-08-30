@@ -1,4 +1,4 @@
-import { queryGiphyApi, queryWeatherApi, gifHumidityEval, gifTempEval } from '../queries/queries';
+import { queryGiphyApi, queryWeatherApi } from '../queries/queries';
 
 export const FETCH_LOCATION = 'FETCH_LOCATION'
 export const fetchLocation = payload => dispatch => {
@@ -15,17 +15,18 @@ export const setLocation = payload => dispatch => {
     return dispatch({
         type: SET_LOCATION,
         tempActual: payload.tempActual,
-        temp: payload.temp,
-        weather: payload.weather,
+        tempID: payload.tempID,
+        weatherActual: payload.weatherActual,
+        weatherID: payload.weatherID,
         humidityActual: payload.humidityActual,
-        humidity: payload.humidity,
+        humidityID: payload.humidityID,
         time: payload.time,
         response: payload,
-        gifTempDispatch: queryGiphyApi(payload.temp)
+        gifTempDispatch: queryGiphyApi(payload.tempID)
         .then(gifData => dispatch(storeGif(gifData, 'gifTemp'))),
-        gifWeatherDispatch: queryGiphyApi(payload.weather)
+        gifWeatherDispatch: queryGiphyApi(payload.weatherID)
         .then(gifData => dispatch(storeGif(gifData, 'gifWeather'))),
-        gifHumidityDispatch: queryGiphyApi(payload.humidity)
+        gifHumidityDispatch: queryGiphyApi(payload.humidityID)
         .then(gifData => dispatch(storeGif(gifData, 'gifHumidity')))
     })
 }

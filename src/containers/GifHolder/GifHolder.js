@@ -41,14 +41,7 @@ const mapStateToProps = state => {
         gifWeather: state.gifWeather,
         gifHumidity: state.gifHumidity,
         gifTime: state.gifTime,
-        temp: state.temp
     }
 }
-
-// const mapDispatchToProps = dispatch => {
-//     return {
-//         onFetchLocation: () => dispatch(actionCreators.fetchLocation(term))
-//     }
-// }
 
 export default connect(mapStateToProps, null)(GifHolder);
