@@ -23,7 +23,7 @@ class GifHolder extends Component {
                     category="Humidity"
                     info={!this.props.humidityActual ? null : 'Humidity: ' + this.props.humidityActual}
                 />
-                <div className="col-12 pt-3">
+                <div className="col-12 pt-1 pb-5">
                     <p className="disclaimer">Forecast powered by OpenWeatherMap & Giphy.</p>
                 </div>
             </div>
