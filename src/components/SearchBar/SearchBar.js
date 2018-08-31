@@ -28,9 +28,10 @@ class SearchBar extends Component {
                 <div className="col">
                     <form onSubmit={this.onSearchHandler} className="form-inline justify-content-center">
                         <div className="form-group mb-2">
-                            <input onChange={this.onChangeHandler} type="text" className="location-search form-control-plaintext" placeholder="Enter a Location" />
+                            <input onChange={this.onChangeHandler} type="text" className="location-search form-control-plaintext" placeholder="Enter a City" />
                         </div>
-                        <button onClick={this.props.onFetchLocation} className="btn btn-primary mb-2"><i className="fas fa-search"></i> Search</button>
+                        <button onClick={this.props.onFetchLocation} className="btn btn-primary btn-desktop mb-2"><i className="fas fa-search"></i> Search</button>
+                        <button onClick={this.props.onFetchLocation} className="btn btn-primary btn-mobile mb-2"><i className="fas fa-search"></i></button>
                     </form>
                     <h1 className="searched-location">{this.props.location}</h1>
                 </div>

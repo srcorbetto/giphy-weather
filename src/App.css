@@ -3,11 +3,11 @@
 }
 
 .component-container {
-  min-height: 95vh;
+  min-height: 93vh;
 }
 
 .footer-container {
   width: 100%;
-  min-height: 5vh;
+  min-height: 7vh;
   background: #0071bc;
 }

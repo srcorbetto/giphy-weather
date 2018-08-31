@@ -29,7 +29,7 @@ export const gifTempEval = arg => {
         case tempF <= 85 && tempF >= 80:
             return 'fV8cSZA0EJcq55gZQo'
         case tempF < 80 && tempF > 70:
-            return 'xUPGcsOgXlvWc3cces'
+            return 'l4FGIp6PDxcuJbvdC'
         case tempF <= 70 && tempF >= 60:
             return '4HkdcaEALCejSzmpcQ'
         case tempF < 60 && tempF > 49:
@@ -77,7 +77,7 @@ export const gifWeatherEval = weather => {
 
     switch(true) {
         case weather === 'clear sky':
-            return 'pcLlolOpZm5LbWyYos'
+            return '12bSyZ2lLVvZ4s'
         case weather === 'few clouds':
             return 'K7o9FdCoDnwEo'
         case weather === 'scattered clouds':
@@ -97,7 +97,7 @@ export const gifWeatherEval = weather => {
         case weather === 'light intensity shower rain':
             return '10Il5KJtmnr7dC'
         case weather === 'overcast clouds':
-            return 'mOETDm4uu73Bm'
+            return '3oEjHUWNlf67TnmKDS'
         default:
             return '1fm964SLnrY26wSD53'
     }

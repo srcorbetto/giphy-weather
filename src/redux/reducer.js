@@ -1,7 +1,7 @@
 import { SET_LOCATION, STORE_GIF, FETCH_LOCATION } from './action-types';
 
 const initialState = {
-    location: null,
+    location: 'Enter a City',
     tempActual: null,
     tempID: null,
     gifTemp: null,
@@ -10,7 +10,8 @@ const initialState = {
     gifWeather: null,
     humidityActual: null,
     humidityID: null,
-    gifHumidity: null
+    gifHumidity: null,
+    gifLoading: 'https://media.giphy.com/media/SGCJ3fc9PC0PEDfMMo/giphy.gif'
 }
 
 const reducer = (state = initialState, action) => {
@@ -18,7 +19,10 @@ const reducer = (state = initialState, action) => {
         case FETCH_LOCATION:
             return{
                 ...state,
-                location: action.location
+                location: action.location,
+                gifTemp: state.gifLoading,
+                gifWeather: state.gifLoading,
+                gifHumidity: state.gifLoading
             }
         case SET_LOCATION:
             return {

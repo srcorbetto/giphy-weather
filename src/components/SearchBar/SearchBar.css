@@ -8,7 +8,7 @@
     width: 500px;
     margin-right: 15px;
     border-radius: 10px;
-    padding: 15px;
+    padding: 15px 25px;
     font-size: 1.15em;
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 3px;
@@ -27,7 +27,7 @@
     background-color: #0071bc;
     border-color: #0071bc;
     border-radius: 10px;
-    padding: 15px;
+    padding: 15px 25px;
     font-size: 1.15em;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 3px;
@@ -36,6 +36,82 @@
 }
 
 .btn-primary:hover {
-    background-color: #0071bc;
-    border-color: #0071bc;
+    background-color: #0081d6;
+    border-color: #0081d6;
+}
+
+.btn-mobile {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .location-search {
+        background: rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.4);
+        width: 400px;
+        margin-right: 15px;
+        border-radius: 10px;
+        padding: 15px 25px;
+        font-size: 1.15em;
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        transition: .25s;
+    }
+}
+
+@media (max-width: 767px) {
+    .location-search {
+        background: rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.4);
+        width: 300px;
+        margin-right: 15px;
+        border-radius: 10px;
+        padding: 15px 25px;
+        font-size: 1.15em;
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        transition: .25s;
+    }
+}
+
+@media (max-width: 522px) {
+    .location-search {
+        background: rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.4);
+        width: 225px;
+        margin-right: 15px;
+        border-radius: 10px;
+        padding: 15px 25px;
+        font-size: 1.15em;
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        transition: .25s;
+    }
+
+    .btn-desktop {
+        display: none;
+    }
+
+    .btn-mobile {
+        display: initial;
+    }
+}
+
+@media (max-width: 343px) {
+    .location-search {
+        background: rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.4);
+        width: 200px;
+        margin-right: 15px;
+        border-radius: 10px;
+        padding: 15px 25px;
+        font-size: 1.15em;
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        transition: .25s;
+    }
 }
