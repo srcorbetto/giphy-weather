@@ -30,13 +30,9 @@ class SearchBar extends Component {
                         <div className="form-group mb-2">
                             <input onChange={this.onChangeHandler} type="text" className="location-search form-control-plaintext" placeholder="Enter a Location" />
                         </div>
-                        <button onClick={this.props.onFetchLocation} className="btn btn-primary mb-2">Search</button>
+                        <button onClick={this.props.onFetchLocation} className="btn btn-primary mb-2"><i className="fas fa-search"></i> Search</button>
                     </form>
                     <h1 className="searched-location">{this.props.location}</h1>
-                    {/* <img src={this.props.gifTemp} alt=""/>
-                    <img src={this.props.gifWeather} alt=""/>
-                    <img src={this.props.gifHumidity} alt=""/>
-                    <img src={this.props.gifTime} alt=""/> */}
                 </div>
             </div>
         )
@@ -46,13 +42,7 @@ class SearchBar extends Component {
 const mapStateToProps = state => {
     return {
         state: state,
-        location: state.location,
-        response: state.response,
-        gifTemp: state.gifTemp,
-        gifWeather: state.gifWeather,
-        gifHumidity: state.gifHumidity,
-        gifTime: state.gifTime,
-        temp: state.temp
+        location: state.location
     }
 }
 
