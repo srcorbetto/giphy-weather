@@ -98,6 +98,10 @@ export const gifWeatherEval = weather => {
             return '10Il5KJtmnr7dC'
         case weather === 'overcast clouds':
             return '3oEjHUWNlf67TnmKDS'
+        case weather === 'light rain':
+            return '5YmnX9SxNbFargbddX'
+        case weather === 'haze':
+            return '8ZjEKUr3bsToA'
         default:
             return '1fm964SLnrY26wSD53'
     }
