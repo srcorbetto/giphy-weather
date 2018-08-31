@@ -6,7 +6,19 @@ export const fetchLocation = payload => dispatch => {
         type: FETCH_LOCATION,
         location: payload,
         payload: queryWeatherApi(payload)
-        .then(locData => dispatch(setLocation(locData)))
+        .then(locData => {
+            console.log('locData: ' + locData)
+            if (locData === 'City not found.') {
+                const errorData = {
+                    errorID: 'l378yQjDMER6TR8Q0',
+                    errorMessage: locData
+                }
+                console.log(errorData);
+                dispatch(errorLocation(errorData))
+            } else {
+                dispatch(setLocation(locData))
+            }
+        })
     })
 }
 
@@ -29,6 +41,17 @@ export const setLocation = payload => dispatch => {
         .then(gifData => dispatch(storeGif(gifData, 'gifWeather'))),
         gifHumidityDispatch: queryGiphyApi(payload.humidityID)
         .then(gifData => dispatch(storeGif(gifData, 'gifHumidity')))
+    })
+}
+
+export const ERROR_LOCATION = 'ERROR_LOCATION';
+export const errorLocation = payload => dispatch => {
+    return dispatch({
+        type: ERROR_LOCATION,
+        tempActual: payload.errorMessage,
+        weatherActual: payload.errorMessage,
+        humidityActual: payload.errorMessage,
+        timeActual: payload.errorMessage
     })
 }
 

@@ -49,7 +49,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onFetchLocation: () => dispatch(actionCreators.fetchLocation(term))
+        onFetchLocation: () => dispatch(actionCreators.fetchLocation(term.trim().toLowerCase()))
     }
 }
 
