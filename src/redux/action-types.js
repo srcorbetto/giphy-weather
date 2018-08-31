@@ -20,7 +20,8 @@ export const setLocation = payload => dispatch => {
         weatherID: payload.weatherID,
         humidityActual: payload.humidityActual,
         humidityID: payload.humidityID,
-        time: payload.time,
+        timeActual: payload.timeActual,
+        timeID: payload.timeID,
         response: payload,
         gifTempDispatch: queryGiphyApi(payload.tempID)
         .then(gifData => dispatch(storeGif(gifData, 'gifTemp'))),

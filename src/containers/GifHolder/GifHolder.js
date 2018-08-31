@@ -11,18 +11,17 @@ class GifHolder extends Component {
                 <Card
                     gif={this.props.gifTemp}
                     category="Temperature"
+                    info={!this.props.tempActual ? null : 'Temperature: ' + this.props.tempActual + '° F'}
                 />
                 <Card
                     gif={this.props.gifWeather}
                     category="Weather"
+                    info={!this.props.weatherActual ? null : 'Weather: ' + this.props.weatherActual}
                 />
                 <Card
                     gif={this.props.gifHumidity}
                     category="Humidity"
-                />
-                <Card
-                    gif={this.props.gifTemp}
-                    category="Time"
+                    info={!this.props.humidityActual ? null : 'Humidity: ' + this.props.humidityActual}
                 />
                 <div className="col-12 pt-3">
                     <p className="disclaimer">Forecast powered by OpenWeatherMap & Giphy.</p>
@@ -36,11 +35,12 @@ const mapStateToProps = state => {
     return {
         state: state,
         location: state.location,
-        response: state.response,
+        tempActual: state.tempActual,
         gifTemp: state.gifTemp,
+        weatherActual: state.weatherActual,
         gifWeather: state.gifWeather,
-        gifHumidity: state.gifHumidity,
-        gifTime: state.gifTime,
+        humidityActual: state.humidityActual,
+        gifHumidity: state.gifHumidity
     }
 }
 

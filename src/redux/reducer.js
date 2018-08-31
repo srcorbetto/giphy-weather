@@ -1,7 +1,6 @@
 import { SET_LOCATION, STORE_GIF, FETCH_LOCATION } from './action-types';
 
 const initialState = {
-    response: 'test',
     location: null,
     tempActual: null,
     tempID: null,
@@ -11,9 +10,7 @@ const initialState = {
     gifWeather: null,
     humidityActual: null,
     humidityID: null,
-    gifHumidity: null,
-    time: null,
-    gifTime: null
+    gifHumidity: null
 }
 
 const reducer = (state = initialState, action) => {
@@ -31,9 +28,7 @@ const reducer = (state = initialState, action) => {
                 weatherActual: action.weatherActual,
                 weatherID: action.weather,
                 humidityActual: action.humidityActual,
-                humidityID: action.humidityID,
-                time: action.time,
-                response: action.response
+                humidityID: action.humidityID
             }
         case STORE_GIF:
             const stateProp = action.property;

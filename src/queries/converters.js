@@ -7,19 +7,13 @@ export const kelvToF = kelvin => {
 
 // Conver Unix timestamp into standard dateTime
 export const unixToDateTime = timestamp => {
-    // Create a new JavaScript Date object based on the timestamp
-    // multiplied by 1000 so that the argument is in milliseconds, not seconds.
-    const date = new Date(timestamp * 1000);
-    // Hours part from the timestamp
-    const hours = date.getHours();
-    // Minutes part from the timestamp
-    const minutes = "0" + date.getMinutes();
-    // Seconds part from the timestamp
-    const seconds = "0" + date.getSeconds();
-    // Will display time in 10:30:23 format
-    const formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
 
-    return formattedTime;
+    // var timestamp = 1439329773; // replace your timestamp
+    const date = new Date(timestamp * 1000);
+    const formattedDate = ('0' + date.getDate()).slice(-2) + '/' + ('0' + (date.getMonth() + 1)).slice(-2) + '/' + date.getFullYear() + ' ' + ('0' + date.getHours()).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2);
+    console.log(formattedDate);
+
+    return formattedDate;
 }
 
 // Convert F to a string that GIPHY can use
@@ -100,33 +94,10 @@ export const gifWeatherEval = weather => {
             return 'h4rVmXTEaH160'
         case weather === 'mist':
             return 'C8okPSDOWUydX9zQwC'
-        default:
-            return '1fm964SLnrY26wSD53'
-    }
-}
-
-// Convert Weather to a string that GIPHY can use
-export const gifTimeEval = weather => {
-
-    switch(true) {
-        case weather === 'clear sky':
-            return 'pcLlolOpZm5LbWyYos'
-        case weather === 'few clouds':
-            return 'K7o9FdCoDnwEo'
-        case weather === 'scattered clouds':
-            return '8UGoPne38DRj4M7tgC'
-        case weather === 'broken clouds':
-            return '139VhIY2eHewz6'
-        case weather === 'shower rain':
-            return '7BLrHMYKpMxG0'
-        case weather === 'rain':
-            return '3WJsR3oQwp4A'
-        case weather === 'thunderstorm':
-            return 'VtOUGnwCOouCQ'
-        case weather === 'snow':
-            return 'h4rVmXTEaH160'
-        case weather === 'mist':
-            return 'C8okPSDOWUydX9zQwC'
+        case weather === 'light intensity shower rain':
+            return '10Il5KJtmnr7dC'
+        case weather === 'overcast clouds':
+            return 'mOETDm4uu73Bm'
         default:
             return '1fm964SLnrY26wSD53'
     }
