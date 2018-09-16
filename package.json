@@ -2,7 +2,7 @@
   "name": "giphy-weather",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mike-corbett/giphy-weather",
+  "homepage": "https://srcorbetto.github.io/giphy-weather",
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.1.3",
