@@ -1,5 +1,4 @@
 # GIPHY Weather
----
 A Fun and easy to use weather app built with React and using the GIPHY & OpenWeather APIs. Get the weather and forecast in fun and informative GIPHY stickers.
 
 ## Usage
